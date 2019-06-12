@@ -1,0 +1,48 @@
+h1 {
+    text-align: center
+}
+
+div {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid;
+}
+
+li {
+    margin: 10px 10px;
+}
+
+table {
+    width: auto;
+}
+td {
+    height: auto;
+    vertical-align: top;
+    padding: 15px;
+}
+td.timeline, p.timeline {
+    font-weight: bold;
+}
+ul.timeline {
+    list-style-type: none;
+    padding: 0px;
+    font-style: italic
+}
+
+.basic-info {
+    position: relative;
+    height: 275;
+}
+.basic-info-img {
+    /* width: 30%;
+    height: auto; */
+    width: 175px;
+    height: 250px;
+    margin-left: 25px;
+    box-shadow: 0px 0px 20px grey;
+}
+.basic-info-ul {
+    position: absolute;
+    top: 0px;
+    left: 175px;
+}
