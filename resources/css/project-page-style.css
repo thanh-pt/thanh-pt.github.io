@@ -4,38 +4,78 @@ h1 {
     text-align: center
 }
 
-img {
-    width: 300;
-    height: 200;
-    box-shadow: 0px 0px 5px gray;
+div {
+    display: block;
 }
-img:hover {
-    box-shadow: 0px 0px 10px #5cb85c;
+
+.gridCard {
+    width: 90%;
+    height: auto;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.card {
+    display: block;
+    width: 250px;
+    height: 300px;
+    float: left;
+    margin: 10px;
+    border: 1px solid #000;
+}
+
+.card:hover {
+    box-shadow: 0 0 16px 0 #5cb85c;
     cursor: pointer;
 }
 
-/* The Iframe */
-iframe {
-    width: 70%;
-    height: 90%;
-    float: left;
-    padding-right: 10px
+.container {
+    padding: 2px 16px;
 }
 
-/* The Model header */
+/* The model container*/
+.model-container {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 15%;
+    left: 10%;
+    background-color: white;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
 .modal-header {
+    position: absolute;
     display: inline-block;
     width: 100%;
     height: 10%;
+    top: 0%;
+    left: 0%;
     text-align: center;
     background-color: #5cb85c;
     color: white;
 }
+iframe {
+    position: absolute;
+    float: left;
+    top: 10%;
+    width: 75%;
+    height: 90%;
+}
+.model-description {
+    position: absolute;
+    width: 24%;
+    height: 90%;
+    left: 76%;
+    top: 10%;
+}
 
 /* The Close Button */
 .close {
-    float: left;
-    padding: 10px;
+    float: right;
+    padding-right: 10px;
     color: white;
     font-size: 38px;
     font-weight: bold;
@@ -45,7 +85,6 @@ iframe {
     color: #000;
     cursor: pointer;
 }
-
 /* add models class here */
 .autotunePID-model,
 .clipboardIPC-model {
@@ -56,8 +95,13 @@ iframe {
     left: 0%;
     width: 100%; /* Full width */
     height: 100%; /* Full device height */
-    background-color: rgb(0,0,0);
-    background-color: rgba(255,255,255,0.8);
-    overflow: auto; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -80%; opacity: 0}
+    to {top: 15%; opacity: 1}
+}

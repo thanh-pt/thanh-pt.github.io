@@ -22,12 +22,12 @@ function displayModel(_modal) {
     _modal.style.display = "block";
 }
 
-/* disable close model by click on window feature
+// disable close model by click on window feature
 window.onclick = function(event) {
   if (event.target == currentModel) {
     currentModel.style.display = "none";
   }
-}*/
+}
 
 window.onload = function () {
     init();
