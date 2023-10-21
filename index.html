@@ -9,7 +9,16 @@
   </body>
   <script>
   if (window.location.search == ""){
-    window.location.href = "https://github.com/ewerx/x-redirect/";
+    // window.location.href = "https://github.com/ewerx/x-redirect/";
+    // Mở cửa sổ con
+    var childWindow = window.open('https://www.example.com', '_blank');
+
+    // Đợi một khoảng thời gian và sau đó đóng cửa sổ con
+    setTimeout(function() {
+        if (childWindow && !childWindow.closed) {
+            childWindow.close();
+        }
+    }, 5000); // Đóng cửa sổ sau 5 giây
   } else {
     const queryString = window.location.search;
     window.location.href = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
