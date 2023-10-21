@@ -16,8 +16,7 @@
   } else {
     const queryString = window.location.search;
     window.location.href = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
-    window.close(); // Function này hiện tại không thể hoạt động được!
-    document.getElementsByTagName('body')[0].innerHTML = "Ok. done - [Ctrl+W] to close window"
+    window.close();
   };
 </script>
 
