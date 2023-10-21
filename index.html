@@ -1,4 +1,24 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting</title>
+  </head>
+  <body>
+  Redirecting...
+  </body>
+  <script>
+  if (window.location.search == ""){
+    window.location.href = "https://github.com/ewerx/x-redirect/";
+  } else {
+    const queryString = window.location.search;
+    window.location.href = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
+    window.close();
+  };
+  </script>
+</html>
+
+<!-- <html>
   <head>
     <title>Tiến Thành's Website</title>
   </head>
@@ -11,4 +31,4 @@
 	  <li><a href="pages/snakeGame">snakeGame</a></li>
     </ul>
   </body>
-</html>
+</html> -->
